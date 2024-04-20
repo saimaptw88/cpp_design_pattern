@@ -1,25 +1,32 @@
 #include "documents.hh"
+#include "../Libraries/Serializer/serializer.hh"
+#include "../Libraries/JsonTranslator/json.hh"
 
 
 void PDF::exportToJSON() const {
-  std::cout << "PDF: " << __func__ << std::endl;
+  auto json = Json();
+  std::cout << json.to_json("pdf") << std::endl;
 }
 
 void PDF::serialize(ByteStream& byte_stream) const {
+  auto serializer = Serializer();
+
   std::cout << "PDF: "
-            << __func__
+            << serializer.encode("pdf")
             << ", "
             << byte_stream.name()
             << std::endl;
 }
 
 void WORD::exportToJSON() const {
-  std::cout << "WORD: " << __func__ << std::endl;
+  auto json = Json();
+  std::cout << "WORD: " << json.to_json("word") << std::endl;
 }
 
 void WORD::serialize(ByteStream& byte_stream) const {
+  auto serializer = Serializer();
   std::cout << "WORD: "
-            << __func__
+            << serializer.encode("word")
             << ", "
             << byte_stream.name()
             << std::endl;
