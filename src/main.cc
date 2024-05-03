@@ -1,7 +1,8 @@
-#include <iostream>
+#include "Guideline2/execute.hh"
 
 
 int main() {
-  std::cout << "Hello world." << std::endl;
+  Guideline2::execute();
+
   return 0;
 }

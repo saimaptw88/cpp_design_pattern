@@ -6,3 +6,12 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 add_executable(main main.cc)
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
+
+add_subdirectory(Guideline2)
+add_subdirectory(Libraries)
+
+target_link_libraries(
+main
+PUBLIC "-pthread"
+guideline2
+)
