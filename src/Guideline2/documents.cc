@@ -1,15 +1,18 @@
+#include <utility>
+
 #include "documents.hh"
-#include "../Libraries/Serializer/serializer.hh"
-#include "../Libraries/JsonTranslator/json.hh"
+#include "serialization.hh"
+#include "json.hh"
 
 
+namespace Guideline2 {
 void PDF::exportToJSON() const {
   auto json = Json();
   std::cout << json.to_json("pdf") << std::endl;
 }
 
 void PDF::serialize(ByteStream& byte_stream) const {
-  auto serializer = Serializer();
+  auto serializer = Serialization();
 
   std::cout << "PDF: "
             << serializer.encode("pdf")
@@ -24,7 +27,7 @@ void WORD::exportToJSON() const {
 }
 
 void WORD::serialize(ByteStream& byte_stream) const {
-  auto serializer = Serializer();
+  auto serializer = Serialization();
   std::cout << "WORD: "
             << serializer.encode("word")
             << ", "
@@ -48,5 +51,6 @@ std::unique_ptr<Documents> createDocument(DocumentType type) {
     break;
   }
 
-  return document;
+  return std::move(document);
 }
+};  // namespace Guideline2

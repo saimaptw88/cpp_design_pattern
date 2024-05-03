@@ -5,6 +5,7 @@
 #include <string>
 
 
+namespace Guideline2 {
 class Documents;
 
 class User {
@@ -16,5 +17,6 @@ class User {
   private:
     std::string name_;
 };
+};  // namespace Guideline2
 
 #endif  // GUIDELINE2_USERS_HH_

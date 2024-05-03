@@ -75,6 +75,7 @@
     "*.tcc": "cpp",
     "memory_resource": "cpp",
     "stop_token": "cpp",
-    "thread": "cpp"
+    "thread": "cpp",
+    "__functional_03": "cpp"
   }
 }

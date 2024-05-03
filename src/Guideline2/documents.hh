@@ -6,6 +6,7 @@
 #include <string>
 
 
+namespace Guideline2 {
 enum class DocumentType {
   pdf,
   word,
@@ -46,5 +47,6 @@ class WORD : public Documents {
 
 
 std::unique_ptr<Documents> createDocument(DocumentType);
+};  // namespace Guideline2
 
 #endif  // GUIDELINE2_DOCUMENTS_HH_
