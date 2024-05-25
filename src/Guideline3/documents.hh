@@ -10,11 +10,9 @@
 #include "serializable.hh"
 
 namespace Guideline3 {
-class Documents /*: public JSONExportable, public Serializable*/ {
+class Documents : public JSONExportable, public Serializable {
   public:
     virtual ~Documents() = default;
-    virtual void exportToJSON() const = 0;
-    virtual void serialize(ByteStream&) const = 0;
 };
 };  // namespace Guideline3
 
