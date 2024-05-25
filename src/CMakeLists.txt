@@ -10,6 +10,7 @@ find_package(Threads REQUIRED)
 add_subdirectory(Guideline2)
 add_subdirectory(Guideline3)
 add_subdirectory(Guideline4)
+add_subdirectory(Guideline5)
 
 add_subdirectory(Libraries)
 add_subdirectory(Utilities)
@@ -20,4 +21,5 @@ PUBLIC "-pthread"
 guideline2
 guideline3
 guideline4
+guideline5
 )
