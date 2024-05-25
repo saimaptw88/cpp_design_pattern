@@ -8,10 +8,13 @@ set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 
 add_subdirectory(Guideline2)
+add_subdirectory(Guideline3)
 add_subdirectory(Libraries)
+add_subdirectory(Utilities)
 
 target_link_libraries(
 main
 PUBLIC "-pthread"
 guideline2
+guideline3
 )
