@@ -19,9 +19,14 @@ class Document {
 void useDocument(Document&);
 
 template <typename T>
-concept Document = requires(T t, ByteStream b) {
+concept Documents = requires(T t, ByteStream b) {
   t.exportToJSON();
   t.serialize(b);
+};
+
+template <Documents T>
+void useDocument(T& doc) {
+  doc.exportToJSON();
 }
 };  // namespace Guideline7
 #endif  // SRC_GUIDELINE7__DOCUMENT_HH_
