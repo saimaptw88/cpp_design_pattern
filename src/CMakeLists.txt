@@ -12,6 +12,8 @@ add_subdirectory(Guideline3)
 add_subdirectory(Guideline4)
 add_subdirectory(Guideline5)
 add_subdirectory(Guideline6)
+add_subdirectory(Guideline7)
+add_subdirectory(Guideline8)
 
 add_subdirectory(Libraries)
 add_subdirectory(Utilities)
@@ -24,4 +26,6 @@ guideline3
 guideline4
 guideline5
 guideline6
+guideline7
+guideline8
 )
