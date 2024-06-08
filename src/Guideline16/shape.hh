@@ -1,12 +1,15 @@
-#ifndef SRC_GUIDELINE15_SHAPE_HH_
-#define SRC_GUIDELINE15_SHAPE_HH_
+#ifndef SRC_GUIDELINE16_SHAPE_HH_
+#define SRC_GUIDELINE16_SHAPE_HH_
 
 
-namespace Guideline15 {
+namespace Guideline16 {
 enum ShapeType {
   circle,
   square
 };
+
+class ShapeVisitor;
+
 class Shape {
   protected:
     explicit Shape(ShapeType type) : type_(type) {}
@@ -16,10 +19,10 @@ class Shape {
 
     ShapeType getType() const { return type_; }
 
-    virtual void draw() const = 0;
+    virtual void accept(const ShapeVisitor&) = 0;
 
   private:
     ShapeType type_;
 };
-};  // namespace Guideline15
-#endif  // SRC_GUIDELINE15_SHAPE_HH_
+};  // namespace Guideline16
+#endif  // SRC_GUIDELINE16_SHAPE_HH_
