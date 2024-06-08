@@ -2,6 +2,7 @@
 #define SRC_GUIDELINE15_SQUARE_HH_
 
 
+#include "draw_square.hh"
 #include "point.hh"
 #include "shape.hh"
 
@@ -14,6 +15,8 @@ class Square : public Shape {
 
     double side() const { return side_; }
     Point center() const { return center_; }
+
+    void draw() const override;
 
   private:
     double side_;

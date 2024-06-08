@@ -2,6 +2,9 @@
 #define SRC_GUIDELINE15_CIRCLE_HH_
 
 
+#include <iostream>
+
+#include "draw_circle.hh"
 #include "point.hh"
 #include "shape.hh"
 
@@ -14,6 +17,8 @@ class Circle : public Shape {
 
     double radius() const { return radius_; }
     Point center() const { return center_; }
+
+    void draw() const override;
 
   private:
     double radius_;

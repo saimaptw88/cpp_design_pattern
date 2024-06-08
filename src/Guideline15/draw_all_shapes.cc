@@ -10,15 +10,7 @@
 namespace Guideline15 {
 void draw_all_shapes(const std::vector<std::unique_ptr<Shape>>& shapes) {
   for (const auto& shape: shapes) {
-    switch (shape->getType()) {
-    case circle:
-      draw(static_cast<const Circle&>(*shape));
-      break;
-
-    case square:
-      draw(static_cast<const Square&>(*shape));
-      break;
-    }
+    shape->draw();
   }
 }
 };  // namespace Guideline15

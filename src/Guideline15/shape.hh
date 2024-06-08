@@ -17,6 +17,8 @@ class Shape {
 
     ShapeType getType() const { return type_; }
 
+    virtual void draw() const = 0;
+
   private:
     ShapeType type_;
 };
