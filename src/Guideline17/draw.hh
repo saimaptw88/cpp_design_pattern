@@ -2,16 +2,20 @@
 #define SRC_GUIDELINE17_DRAW_HH_
 
 
-#include "shape_visitor.hh"
+#include <iostream>
+
+#include "shape.hh"
 
 
 namespace Guideline17 {
-class Draw : public ShapeVisitor {
-  public:
-    ~Draw() = default;
+struct Draw {
+  void operator()(const Circle&) const {
+    std::cout << "Draw circle." << std::endl;
+  }
 
-    void visit(const Circle&) const override;
-    void visit(const Square&) const override;
+  void operator()(const Square&) const {
+    std::cout << "Draw square." << std::endl;
+  }
 };
 };  // namespace Guideline17
 #endif  // SRC_GUIDELINE17_DRAW_HH_

@@ -3,20 +3,16 @@
 
 
 #include "point.hh"
-#include "shape.hh"
-#include "shape_visitor.hh"
 
 
 namespace Guideline17 {
-class Square : public Shape {
+class Square {
   public:
     explicit Square(double side)
-      : Shape(square), side_(side) {}
+      : side_(side) {}
 
     double side() const { return side_; }
     Point center() const { return center_; }
-
-    void accept(const ShapeVisitor&) override;
 
   private:
     double side_;

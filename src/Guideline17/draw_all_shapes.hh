@@ -2,14 +2,8 @@
 #define SRC_GUIDELINE17_DRAW_ALL_SHAPES_HH_
 
 
-#include <iostream>
-#include <memory>
-#include <vector>
-
-
+#include "shapes.hh"
 namespace Guideline17 {
-class Shape;
-
-void draw_all_shapes(const std::vector<std::unique_ptr<Shape>>& shapes);
-};  // namespace Guildeline17
+void draw_all_shapes(const Shapes&);
+};  // namespace Guideline17
 #endif  // SRC_GUIDELINE17_DRAW_ALL_SHAPES_HH_
