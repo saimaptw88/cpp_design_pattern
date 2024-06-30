@@ -21,6 +21,7 @@ add_subdirectory(Guideline17)
 add_subdirectory(Guideline18)
 add_subdirectory(Guideline19)
 add_subdirectory(Guideline21)
+add_subdirectory(Guideline22)
 
 add_subdirectory(Libraries)
 add_subdirectory(Utilities)
@@ -42,4 +43,5 @@ guideline17
 guideline18
 guideline19
 guideline21
+guideline22
 )
