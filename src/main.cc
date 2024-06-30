@@ -9,6 +9,7 @@
 #include "Guideline17/execute.hh"
 #include "Guideline18/execute.hh"
 #include "Guideline19/execute.hh"
+#include "Guideline21/execute.hh"
 
 
 int main() {
@@ -23,6 +24,7 @@ int main() {
   Guideline17::execute();
   Guideline18::execute();
   Guideline19::execute();
+  Guideline21::execute();
 
   return 0;
 }
